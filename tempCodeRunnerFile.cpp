@@ -11,7 +11,7 @@ bool containsDuplicate(vector<int>& nums) {
         }
         return true;
     }
-ss
+
 int main() {
  
   vector <int> nums={1,2,3,1};
