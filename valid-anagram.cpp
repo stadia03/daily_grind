@@ -22,6 +22,6 @@ int main() {
   string s,t;
   cin>>s>>t;
   cout<<isAnagram(s,t);
- 
+  cout<<"Executed";
   return 0;
 }
