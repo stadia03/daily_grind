@@ -16,7 +16,7 @@ int main() {
   }
   xor1=xor1 ^ n; //to include last number, as it is not covered by loop 
 
-  cout<<(xor1 ^ xor2);  //XOR of any num with 0 is num itself
+  cout<<(xor1 ^ xor2);  //XOR of any num with 0 is num itself.
  
   return 0;
 }
