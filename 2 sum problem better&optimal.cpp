@@ -29,7 +29,7 @@ void two_sum_optimal(int arr[],int n,int k){
   int flag=0;
   sort(arr,arr+n);
   
-  while(i<j && j<n){
+  while(i<j ){
     if(arr[i]+arr[j]==k)
       {
         cout<<i<<" "<<j;
@@ -37,9 +37,9 @@ void two_sum_optimal(int arr[],int n,int k){
         flag=1;
         break;
       }
-    if(arr[i]+arr[j]<k)
+    else if(arr[i]+arr[j]<k)
       i++;
-    if(arr[i]+arr[j]>k)
+    else
       j--;
     
   }
