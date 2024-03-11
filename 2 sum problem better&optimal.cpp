@@ -17,17 +17,34 @@ void two_sum_better(int arr[],int n ,int k){
       if(mp.find(rem)!=mp.end() && mp[rem] != i ){
         cout<<i<<" "<<mp[rem];
         flag=1;
-        break;
-
-
-      }
+        break;}
     }
     if(!flag)
       cout<<"NOT FOUND";
-  
+  }
 
+void two_sum_optimal(int arr[],int n,int k){
+  int i=0;
+  int j=n-1;
+  int flag=0;
+  sort(arr,arr+n);
   
-
+  while(i<j && j<n){
+    if(arr[i]+arr[j]==k)
+      {
+        cout<<i<<" "<<j;
+        
+        flag=1;
+        break;
+      }
+    if(arr[i]+arr[j]<k)
+      i++;
+    if(arr[i]+arr[j]>k)
+      j--;
+    
+  }
+  if(!flag)
+    cout<<"NOT FOUND";
 }
 
 
@@ -41,8 +58,8 @@ int main() {
   cout<<"Enter sum:";
   int sum;
   cin>>sum;
-  two_sum_better(arr,n,sum);
-  // two_sum_optimal(arr,n);
+  // two_sum_better(arr,n,sum);
+  two_sum_optimal(arr,n,sum);
  
   return 0;
 }
