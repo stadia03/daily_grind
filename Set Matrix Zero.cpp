@@ -69,6 +69,8 @@ return matrix;
 
 }
 
+// TC: O(2xNxM)
+// SC: O(1)
 vector <vector<int>> Zeromatrix_optimal(vector<vector<int>>&matrix,int n,int m){
 
   int col0=0;
