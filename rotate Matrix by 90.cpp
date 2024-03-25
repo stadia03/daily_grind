@@ -15,7 +15,7 @@ vector<vector<int>> rotateMatrix_brute(vector<vector<int>>& matrix,int n,int m){
 }
 
 // TC: O(n/2 * n/2) + O(n*n/2)
-// SC: O(1)
+// SC: O(1) .
 vector<vector<int>> rotateMatrix_optimal(vector<vector<int>>& matrix,int n,int m){
 
   // for getting transpose
@@ -24,7 +24,7 @@ vector<vector<int>> rotateMatrix_optimal(vector<vector<int>>& matrix,int n,int m
         swap(matrix[i][j],matrix[j][i]);
       }
   }
-
+  
   // for swapping each row
 
   for(int i=0;i<n;i++){

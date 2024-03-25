@@ -7,7 +7,7 @@ int main() {
 	    
 	    long long max=0,n,count=0;
 	    cin>>n;
-	    long long arr[n];
+	    long long arr[n] ;
 	    for(long long i=0;i<n;i++)
 	        cin>>arr[i];
 	   
