@@ -1,5 +1,6 @@
+// Combination Sum I
 // find subset that sums upto k problem 
-
+//same element also can be used as many times a possible
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,12 +20,15 @@ int findSubsets(vector<int>v1,int i,int k,vector<int>currSelection){
   }else{
    return 0;
   }}
-  currSelection.push_back(v1[i]);
-  k-=v1[i];
-  int l=findSubsets(v1,i+1,k,currSelection); //pick
-
+  int l=0;
+  if(k-v1[i]>=0){
+     currSelection.push_back(v1[i]);
+    l=findSubsets(v1,i,k-v1[i],currSelection); //pick
+    //pick the same element 2 or more times to get results like {2,2,3} ;;;;;
   currSelection.pop_back();
-  k+=v1[i];
+
+  }
+ 
   int r=findSubsets(v1,i+1,k,currSelection); // not pick
 
   return l+r;
@@ -32,8 +36,8 @@ int findSubsets(vector<int>v1,int i,int k,vector<int>currSelection){
 
 int main() {
  
-  vector<int>v1={3, 34, 4, 12, 5, 2};
-  int k=9;
+  vector<int>v1={5,1};
+  int k=15;
   int sol=findSubsets(v1,0,k,{});
   cout<<endl<<"Total Subsets="<<sol;
  
