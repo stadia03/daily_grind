@@ -1,5 +1,5 @@
 // Combination Sum I
-// find subset that sums upto k problem 
+// find subsequence that sums upto k problem 
 //same element also can be used as many times a possible
 #include <bits/stdc++.h>
 using namespace std;
